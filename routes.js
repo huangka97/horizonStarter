@@ -7,7 +7,7 @@ var Project = require('./models').Project;
 var strftime = require('strftime');
 var bodyParser=require('body-parser');
 router.use(bodyParser({extended:true}));
-// Example endpoint
+
 router.get('/create-test-project', function(req, res) {
   var project = new Project({
     title: 'I am a test project'
@@ -21,7 +21,7 @@ router.get('/create-test-project', function(req, res) {
   });
 });
 
-// Part 1: View all projects
+// View all projects
 // Implement the GET / endpoint.
 router.get('/', function(req, res) {
   // YOUR CODE HERE
@@ -30,7 +30,7 @@ router.get('/', function(req, res) {
   });
 });
 
-// Part 2: Create project
+//  Create project
 // Implement the GET /new endpoint
 router.get('/new', function(req, res) {
   // YOUR CODE HERE
@@ -40,10 +40,10 @@ router.get('/new', function(req, res) {
   
 });
 
-// Part 2: Create project
+//  Create project
 // Implement the POST /new endpoint
 router.post('/new', function(req, res) {
-  // YOUR CODE HERE
+  
   if(isNaN(Number(req.body.Goal))){
     console.log("ERROR");
   }else{
@@ -68,7 +68,7 @@ router.post('/new', function(req, res) {
   //console.log(res);
 });
 
-// Part 3: View single project
+// View single project
 // Implement the GET /project/:projectid endpoint
 router.get('/project/:projectid', function(req, res) {
   // YOUR CODE HERE
@@ -104,7 +104,7 @@ router.get('/project/:projectid', function(req, res) {
   })
 });
 
-// Part 4: Contribute to a project
+//Contribute to a project
 // Implement the GET /project/:projectid endpoint
 router.post('/project/:projectid', function(req, res) {
   // YOUR CODE HERE
@@ -129,7 +129,7 @@ router.post('/project/:projectid', function(req, res) {
   })
 });
 
-// Part 6: Edit project
+
 // Create the GET /project/:projectid/edit endpoint
 // Create the POST /project/:projectid/edit endpoint
 
