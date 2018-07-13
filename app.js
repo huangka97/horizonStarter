@@ -42,7 +42,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Read static files in /public
 app.use(express.static(path.join(__dirname, 'public')));
 
-// All of our routes are in routes.js
+
 var routes = require('./routes');
 app.use('/', routes);
 
