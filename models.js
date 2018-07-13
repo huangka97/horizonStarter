@@ -29,7 +29,7 @@ var Project = mongoose.model('Project', {
   	amount:Number
 
   }]
-  // YOUR CODE HERE
+
 });
 
 module.exports = {
